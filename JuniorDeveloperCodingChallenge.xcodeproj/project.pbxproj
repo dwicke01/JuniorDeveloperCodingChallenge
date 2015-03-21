@@ -15,6 +15,7 @@
 		FA2344131ABCB1B600779A21 /* JuniorDeveloperCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2344121ABCB1B600779A21 /* JuniorDeveloperCodingChallengeTests.swift */; };
 		FA23441D1ABCB1F600779A21 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23441C1ABCB1F600779A21 /* Security.framework */; };
 		FA23441F1ABCB20E00779A21 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23441E1ABCB20E00779A21 /* QuartzCore.framework */; };
+		FA2344211ABCB43F00779A21 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2344201ABCB43F00779A21 /* DropboxSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		FA2344121ABCB1B600779A21 /* JuniorDeveloperCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuniorDeveloperCodingChallengeTests.swift; sourceTree = "<group>"; };
 		FA23441C1ABCB1F600779A21 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA23441E1ABCB20E00779A21 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA2344201ABCB43F00779A21 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		FA2344221ABCBB7000779A21 /* JuniorDeveloperCodingChallenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuniorDeveloperCodingChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2344211ABCB43F00779A21 /* DropboxSDK.framework in Frameworks */,
 				FA23441F1ABCB20E00779A21 /* QuartzCore.framework in Frameworks */,
 				FA23441D1ABCB1F600779A21 /* Security.framework in Frameworks */,
 			);
@@ -65,6 +69,7 @@
 		FA2343EE1ABCB1B500779A21 = {
 			isa = PBXGroup;
 			children = (
+				FA2344201ABCB43F00779A21 /* DropboxSDK.framework */,
 				FA23441E1ABCB20E00779A21 /* QuartzCore.framework */,
 				FA23441C1ABCB1F600779A21 /* Security.framework */,
 				FA2343F91ABCB1B500779A21 /* JuniorDeveloperCodingChallenge */,
@@ -91,6 +96,7 @@
 				FA2344031ABCB1B600779A21 /* Images.xcassets */,
 				FA2344051ABCB1B600779A21 /* LaunchScreen.xib */,
 				FA2343FA1ABCB1B500779A21 /* Supporting Files */,
+				FA2344221ABCBB7000779A21 /* JuniorDeveloperCodingChallenge-Bridging-Header.h */,
 			);
 			path = JuniorDeveloperCodingChallenge;
 			sourceTree = "<group>";
@@ -346,9 +352,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JuniorDeveloperCodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JuniorDeveloperCodingChallenge/JuniorDeveloperCodingChallenge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -356,9 +369,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JuniorDeveloperCodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JuniorDeveloperCodingChallenge/JuniorDeveloperCodingChallenge-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        var dbSession = DBSession(appKey:"23oge5c0g2ye988", appSecret:"x5rer660irpqup3",
+        root:kDBRootDropbox); // either kDBRootAppFolder or kDBRootDropbox
+        DBSession.setSharedSession(dbSession)
+        
         return true
     }
 
@@ -39,6 +43,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool{
+        if DBSession.sharedSession().handleOpenURL(url) {
+            if (DBSession.sharedSession().isLinked()) {
+                println("App linked successfully!")
+            // At this point you can start making API calls
+            }
+            return true;
+        }
+        // Add whatever other url handling code your app requires here
+        println("Uhhhhhh")
+        return false;
     }
 
 
