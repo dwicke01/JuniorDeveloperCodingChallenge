@@ -18,10 +18,87 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yBg-m3-y37"/>
+                    <connections>
+                        <segue destination="Szz-nH-Dow" kind="show" identifier="Authenticated" id="ft2-J8-oGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="215"/>
+            <point key="canvasLocation" x="1096" y="211"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Atw-5V-jVS">
+            <objects>
+                <viewController id="QNN-8C-fic" customClass="CameraViewController" customModule="JuniorDeveloperCodingChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c5C-XW-vG4"/>
+                        <viewControllerLayoutGuide type="bottom" id="4wh-HI-id3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4za-IN-G7m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="cQ0-pT-tJT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSE-Qz-lkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832" y="-110"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ap9-5k-IZW">
+            <objects>
+                <collectionViewController id="zJ8-n3-gd8" customClass="DropboxImageViewController" customModule="JuniorDeveloperCodingChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HDy-KR-sVC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sa7-6e-i4j">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="88B-KJ-la7" customClass="DropboxImageViewCell" customModule="JuniorDeveloperCodingChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="320" height="320"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zJ8-n3-gd8" id="EsD-tl-Duh"/>
+                            <outlet property="delegate" destination="zJ8-n3-gd8" id="jn4-jM-p7L"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="SJ9-Gc-PZ7"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1O-Gv-rUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2827" y="556"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hjD-bG-RfQ">
+            <objects>
+                <tabBarController id="Szz-nH-Dow" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Lty-6l-PeW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QNN-8C-fic" kind="relationship" relationship="viewControllers" id="TQm-b2-iEv"/>
+                        <segue destination="zJ8-n3-gd8" kind="relationship" relationship="viewControllers" id="o4j-uh-ZCK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKd-LN-qmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6uO-E8-AD1">

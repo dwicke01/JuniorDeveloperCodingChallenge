@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         if !DBSession.sharedSession().isLinked() {
             DBSession.sharedSession().linkFromController(self)
         }
-
+        performSegueWithIdentifier("Authenticated", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
